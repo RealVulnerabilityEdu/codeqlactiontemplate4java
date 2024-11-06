@@ -34,7 +34,7 @@ jobs:
       - id: check-code-existence
         name: Check if Java or Kotlin code exists
         run: |
-          n_files=$(find . -type f -name "*.java" -name "*.kt" | wc -l)
+          n_files=$(find . -type f -name "*.java" -or -name "*.kt" | wc -l)
           echo "Number of Java and Kotlin files: $n_files"
           if [ "${n_files}" -eq 0 ]; then
             echo "FILES_EXIST=no" >> "${GITHUB_OUTPUT}"
