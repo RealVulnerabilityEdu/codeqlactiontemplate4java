@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       description: 'Check if Java or Kotlin code exists'
-      files-exist: ${{ steps.check-code-existence.outputs.files-exist }}
+      files-exist: ${{ steps.check-code-existence.outputs.FILES_EXIST }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
